@@ -1,12 +1,20 @@
 <template>
     <div>
-        <div class="d-flex flex-row-reverse">
-            <v-btn @click="registerAddress">
-                Register client
+        <v-row>
+            <v-col cols='12' md="12" >
+                <div class="d-flex justify-center" ><h1>Client list</h1></div>
+            </v-col>
+        </v-row>
+        <div class="d-flex flex-row-reverse mb-4">
+            <v-btn @click="registerAddress" color="primary" >
+                Register new client 
+                <v-icon dark right>
+                    mdi-arrow-right
+                </v-icon>
             </v-btn>
         </div>
         <div>
-            <v-data-table :headers="headers" :items="clientList" :items-per-page="5" class="elevation-1"></v-data-table>
+            <v-data-table :headers="headers" :items="clientList" :items-per-page="10" class="elevation-1"></v-data-table>
         </div>
     </div>
 </template>
