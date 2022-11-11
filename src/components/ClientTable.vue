@@ -42,8 +42,8 @@ export default {
         this.getClients();
     },
     methods: {
-        getClients() {
-            axios
+        async getClients() {
+            await axios
                 .get('/user/payment/all')
                 .then((response) => {
                     this.clientList = response.data;
