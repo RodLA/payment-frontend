@@ -163,11 +163,11 @@ export default {
         this.addPayment();
     },
     methods: {
-        register() {
+        async register() {
 
             if (this.$refs.form.validate()) {
                 console.log(this.userPaymentData);
-                axios
+                await axios
                     .post('/user/payment/save', this.userPaymentData)
                     .then((response) => {
                         if (response.data.status) {
