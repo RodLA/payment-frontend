@@ -1,4 +1,4 @@
 ## Steps to run
 
-- npm install
-- npm run serve
+- $ npm install
+- $ npm run serve
